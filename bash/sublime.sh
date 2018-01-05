@@ -1,1 +1,1 @@
-./start_app_link.sh $1 "sublime_text.exe.lnk"
+~/bash/start_app_link.sh $1 "sublime_text.exe.lnk"
