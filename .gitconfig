@@ -10,6 +10,7 @@
         st = status
         co = checkout
         br = branch
+        bl = blame
         mg = merge
         ci = commit
         ds = diff --staged
@@ -23,11 +24,19 @@
         dump = cat-file -p
         lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%c %C(bold blue)<%an>%Creset' --abbrev-commit
 [core]
-	#autocrlf = false
-	#safecrlf = true
-	#eol = lf
 [push]
         default = simple
 
 [http]
 	sslVerify = false
+[merge "daff-tab"]
+	name = daff tabular tab merge
+	driver = //192.168.21.12/pub/DesignerTools/NewTabTool/bootstrap.exe cui_merge %O %A %B %L %P
+[credential]
+	helper = manager
+[https]
+[core]
+	gitproxy = git-proxy
+[socks]
+	proxy = localhost:1080
+
